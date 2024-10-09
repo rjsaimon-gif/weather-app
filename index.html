@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>My weather application</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <form>
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            class="search"
+            id="search-form"
+            required
+          />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </header>
+      <hr />
+      <main>
+        <div class="weather-status">
+          <h1>Milwaukee</h1>
+          <p id="timing">
+            Sunday 10:18PM, clear<br />
+            H: <strong>74°F</strong>, L: <strong>59°F</strong>
+          </p>
+
+          <div class="current">
+            <span class="icon">🌤</span>
+            <span class="temperature">61</span>
+            <span class="unit">°F</span>
+          </div>
+        </div>
+        <hr />
+      </main>
+      <footer>
+        <p>
+          This project was coded by
+          <a href="" target="_blank">Regina Saimon</a> and is
+          <a href="#" target="_blank"> on GitHub</a> and
+          <a href="#" target="_blank">hosted on Netlify</a>
+        </p>
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

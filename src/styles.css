@@ -1,0 +1,58 @@
+body {
+  background: pink;
+}
+.container {
+  max-width: 600px;
+  margin: 120px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.search {
+  padding: 20px;
+  width: 80%;
+  border-radius: 10px;
+  font-family: monospace;
+}
+.search-button {
+  padding: 15px;
+  border-radius: 20px;
+  background: lightpink;
+}
+footer p {
+  text-align: center;
+}
+strong {
+  color: brown;
+}
+.icon {
+  font-size: 40px;
+}
+.temperature {
+  font-size: 80px;
+  font-weight: 700;
+}
+.unit {
+  font-size: 28px;
+  position: relative;
+  bottom: 28px;
+}
+.weather-status {
+  display: flex;
+  margin-bottom: 90px;
+}
+h1 {
+  font-size: 38px;
+  position: relative;
+  bottom: 15px;
+}
+main p {
+  color: gray;
+  position: relative;
+  top: 49px;
+  right: 180px;
+}
+a {
+  color: brown;
+}
