@@ -18,20 +18,26 @@
             required
             class="search-form-input"
           />
-          <input type="submit" value="Search" class="search-button" id="search-form"/>
+          <input
+            type="submit"
+            value="Search"
+            class="search-button"
+            id="search-form"
+          />
         </form>
       </header>
       <main>
         <div class="weather-status">
-            <div>
-          <h1 class="app-city" id="city">Milwaukee</h1>
-          <p class="app-details">
-            <span id="time"></span>,
-            <span id="description"></span>
-            <br>
-            Sunday 10:18PM, clear<br />
-            H: <strong id="humidity">74°F</strong>, L: <strong id="chill">59°F</strong>
-          </p>
+          <div>
+            <h1 class="app-city" id="city">Milwaukee</h1>
+            <p class="app-details">
+              <span id="time"></span>,
+              <span id="description"></span>
+              <br />
+              Sunday 10:18PM, clear<br />
+              H: <strong id="humidity">74°F</strong>, L:
+              <strong id="chill">59°F</strong>
+            </p>
           </div>
 
           <div class="weather-app-temperature-container">
@@ -40,6 +46,7 @@
             <div class="app-unit">°F</div>
           </div>
         </div>
+        <div class="weather-forecast" id="forecast"></div>
       </main>
       <footer>
         <p>
@@ -51,6 +58,5 @@
       </footer>
     </div>
     <script src="src/index.js"></script>
-
   </body>
 </html>
