@@ -4,38 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>My weather application</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <form>
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a city.."
-            class="search"
-            id="search-form-input"
             required
+            class="search-form-input"
           />
-          <input type="submit" value="Search" class="search-button" />
+          <input type="submit" value="Search" class="search-button" id="search-form"/>
         </form>
       </header>
-      <hr />
       <main>
         <div class="weather-status">
-          <h1 id="city">Milwaukee</h1>
-          <p id="timing">
+            <div>
+          <h1 class="app-city" id="city">Milwaukee</h1>
+          <p class="app-details">
+            <span id="time"></span>,
+            <span id="description"></span>
+            <br>
             Sunday 10:18PM, clear<br />
-            H: <strong>74°F</strong>, L: <strong>59°F</strong>
+            H: <strong id="humidity">74°F</strong>, L: <strong id="chill">59°F</strong>
           </p>
+          </div>
 
-          <div class="current">
-            <span class="icon">🌤</span>
-            <span class="temperature" id="temperature">61</span>
-            <span class="unit">°F</span>
+          <div class="weather-app-temperature-container">
+            <div class="app-icon">🌤</div>
+            <div class="app-temperature" id="temperature">61</div>
+            <div class="app-unit">°F</div>
           </div>
         </div>
-        <hr />
       </main>
       <footer>
         <p>
@@ -47,6 +51,6 @@
       </footer>
     </div>
     <script src="src/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
   </body>
 </html>
