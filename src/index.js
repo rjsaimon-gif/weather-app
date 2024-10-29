@@ -10,7 +10,7 @@ function refreshWeather(response) {
   let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.city;
-  timeElement.innerHTML = `${date.getDay()} ${date.getHours()}:${date.getMinutes()}`;
+  timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed} mi/h`;
@@ -37,9 +37,9 @@ function formatDate(date) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+
   return `${day} ${hours}:${minutes}`;
 }
-
 function searchCity(city) {
   let apiKey = "7a8aacadf32fc08tff87b375486o409c";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
@@ -62,7 +62,7 @@ function formatDay(timestamp) {
 
 function getForecast(city) {
   let apiKey = "7a8aacadf32fc08tff87b375486o409c";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -80,7 +80,7 @@ function displayForecast(response) {
         <img src="${day.condition.icon_url}" class="weather-forecast-icon" />
         <div class="weather-forecast-temperatures">
           <div class="weather-forecast-temperature">
-            <strong>${Math.round(day.temperature.maximum)}º</strong>
+            <strong>${Math.round(day.temperature.maximum)}°</strong>
           </div>
           <div class="weather-forecast-temperature">${Math.round(
             day.temperature.minimum
