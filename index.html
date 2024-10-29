@@ -17,36 +17,37 @@
             placeholder="Enter a city.."
             required
             class="search-form-input"
+            id="search-form-input"
           />
           <input
             type="submit"
             value="Search"
             class="search-button"
-            id="search-form"
+            id="search-button"
           />
         </form>
       </header>
       <main>
         <div class="weather-status">
           <div>
-            <h1 class="app-city" id="city">Milwaukee</h1>
+            <h1 class="weather-app-city" id="city"></h1>
             <p class="app-details">
-              <span id="time"></span>,
+              <span id="time"> </span>,
               <span id="description"></span>
               <br />
-              Sunday 10:18PM, clear<br />
-              H: <strong id="humidity">74°F</strong>, L:
-              <strong id="chill">59°F</strong>
+              Humidity:
+              <strong id="humidity"></strong>, Wind: 
+              <strong id="wind-speed"></strong>
             </p>
           </div>
 
           <div class="weather-app-temperature-container">
-            <div class="app-icon">🌤</div>
-            <div class="app-temperature" id="temperature">61</div>
+            <div id="icon" class="app-icon">🌤</div>
+            <div class="weather-app-temperature" id="temperature">43</div>
             <div class="app-unit">°F</div>
           </div>
         </div>
-        <div class="weather-forecast" id="forecast"></div>
+        <div class="weather-forecast" id="forecast">
       </main>
       <footer>
         <p>
